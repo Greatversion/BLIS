@@ -1,77 +1,37 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 class SeatWidget extends StatelessWidget {
   final bool isAvailable;
+  String seatNumber;
 
-  SeatWidget(this.isAvailable);
+  SeatWidget(
+  
+    this.isAvailable,
+    this.seatNumber,
+  ) : super();
 
   @override
   Widget build(BuildContext context) {
+    var responsive = MediaQuery.of(context);
     return InkWell(
       onTap: () {
         // Handle seat selection or interaction here.
       },
-      child: Container(
-        width: 350,
-        height: 350,
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: isAvailable ? Colors.green : Colors.red,
-          border: Border.all(color: Colors.black),
-        ),
-        child: Text(
-          isAvailable ? 'Available' : 'Occupied',
-          style: const TextStyle(color: Colors.white),
-        ),
-      ),
-    );
-  }
-}
-
-class MyApps extends StatefulWidget {
-  @override
-  _MyAppsState createState() => _MyAppsState();
-}
-
-class _MyAppsState extends State<MyApps> {
-  List<bool> seatAvailability = [
-    true,
-    false,
-    true,
-    true,
-    false,
-    true,
-    false,
-    true,
-    true,
-    false,
-    true,
-    true,
-    false,
-    true,
-    false,
-    true,
-    true,
-    false,
-    true
-  ]; // Sample data
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Room with Seats'),
-        ),
-        body: Center(
-          child: GridView.builder(
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4, // Adjust as needed
-            ),
-            itemCount: seatAvailability.length,
-            itemBuilder: (context, index) {
-              return SeatWidget(seatAvailability[index]);
-            },
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Container(
+          // width: responsive.size.width,
+          // height: 50,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+              color: isAvailable
+                  ? Colors.black
+                  : const Color.fromARGB(255, 112, 112, 112),
+              borderRadius: BorderRadius.circular(10)),
+          child: Text(
+            isAvailable ? seatNumber : 'Full',
+            style: const TextStyle(color: Colors.white),
           ),
         ),
       ),

@@ -1,6 +1,5 @@
 import 'package:bhago_bharat/screens/homeScreen.dart';
 import 'package:bhago_bharat/screens/hotelScreen.dart';
-import 'package:bhago_bharat/screens/seat_matrix.dart';
 
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -26,7 +25,7 @@ class MyApp extends StatelessWidget {
                 ButtonStyle(iconColor: MaterialStatePropertyAll(Colors.white))),
         useMaterial3: true,
       ),
-      home: MyApps(),
+      home: const HomeScreen(),
       routes: {
         "hotelScreen": (context) => const HotelScreen(),
         // "mainScreen": (context) => const MainScreen(),
