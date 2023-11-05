@@ -1,6 +1,6 @@
 # BLIS - Book Libraries In Seconds built at HACKCBS 6.0 (India's Largest Student Running Hackathon)
 
-A new Flutter project.
+
 
 ## The problem Blis App solves
 Design a user-friendly study room booking app for students and room owners, with features for searching, booking, and managing study rooms with flexible hours and renting facilities.
