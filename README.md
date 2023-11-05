@@ -1,4 +1,4 @@
-# hackcbs_project built at HACKCBS 6.0 (India's Largest Student Running Hackathon)
+# BLIS - Book Libraries In Seconds built at HACKCBS 6.0 (India's Largest Student Running Hackathon)
 
 A new Flutter project.
 
