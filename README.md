@@ -25,10 +25,10 @@ Utilised Flutter for the frontend and Node.js with Express and MongoDB for the b
 
 
 ## Team Members and Contributors
-# Aditya Kumar Singh - https://github.com/AD1TYA03 (BACKEND)
-# Ashish Yadav - https://github.com/SachinAshish (DESIGNER & PRESENTER)
-# Ketan Kumar - https://github.com/ketanktn (DESIGNER & PRESENTER)
-# Aditya Verma - https://github.com/Greatversion (FRONTEND & ADMIN)
+### Aditya Kumar Singh - https://github.com/AD1TYA03 (BACKEND)
+### Ashish Yadav - https://github.com/SachinAshish (DESIGNER & PRESENTER)
+### Ketan Kumar - https://github.com/ketanktn (DESIGNER & PRESENTER)
+### Aditya Verma - https://github.com/Greatversion (FRONTEND & ADMIN)
 
 
 For help getting started with Flutter development, view the
