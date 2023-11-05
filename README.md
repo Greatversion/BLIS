@@ -18,13 +18,13 @@ Utilised Flutter for the frontend and Node.js with Express and MongoDB for the b
 ![log-out screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/83ad14c6-0853-49ab-a8f4-e023390347f2)
 
 
-## Other Resources and Overviews
-# CANVA PPT - https://www.canva.com/design/DAFzR2HJiUQ/SZWf4no6_OBjusDYtXZ6nQ/edit?utm_content=DAFzR2HJiUQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
-# GITHUB REPO - https://github.com/Greatversion/hackCbs_project
-# DEVFOLIO LINK - https://devfolio.co/projects/blis-app-b652
+# Other Resources and Overviews
+## CANVA PPT - https://www.canva.com/design/DAFzR2HJiUQ/SZWf4no6_OBjusDYtXZ6nQ/edit?utm_content=DAFzR2HJiUQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+## GITHUB REPO - https://github.com/Greatversion/hackCbs_project
+## DEVFOLIO LINK - https://devfolio.co/projects/blis-app-b652
 
 
-## Team Members and Contributors
+# Team Members and Contributors
 ### Aditya Kumar Singh - https://github.com/AD1TYA03 (BACKEND)
 ### Ashish Yadav - https://github.com/SachinAshish (DESIGNER & PRESENTER)
 ### Ketan Kumar - https://github.com/ketanktn (DESIGNER & PRESENTER)
