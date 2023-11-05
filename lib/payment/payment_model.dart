@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:upi_india/upi_india.dart';
 
 class Payment_Screen extends StatefulWidget {
@@ -21,7 +22,6 @@ class _Payment_ScreenState extends State<Payment_Screen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-   
   }
 
   @override
@@ -38,15 +38,25 @@ class _Payment_ScreenState extends State<Payment_Screen> {
         ],
         backgroundColor: const Color.fromARGB(255, 226, 19, 4),
         title: const Text(
-          "Payment gatway",
+          "Payment gateway",
           style: TextStyle(
               color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
         ),
       ),
-      body: Container(
-        child: Column(
-          children: [],
-        ),
+      body: const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+              child: Text(
+            "PAYMENT STARTED...",
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          )),
+          SpinKitChasingDots(
+            size: 80,
+            color: Colors.greenAccent,
+          )
+        ],
       ),
     );
   }

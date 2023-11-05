@@ -22,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -30,17 +31,12 @@ class MyApp extends StatelessWidget {
                 ButtonStyle(iconColor: MaterialStatePropertyAll(Colors.white))),
         useMaterial3: true,
       ),
-      home: LoginCheck(),
+      home: const LoginCheck(),
       routes: {
         "libScreen": (context) => const HotelScreen(),
         "homeScreen": (context) => const HomeScreen(),
         "loginScreen": (context) => const SignInScreen(),
-        "paymentScreen": (context) => Payment_Screen(),
-        // "mainScreen": (context) => const MainScreen(),
-        // "homePage": (context) => const HomePage(),
-        // // "share": (context) => SharePage(),
-        // "map": (context) => const UserMap(),
-        // "leaderBoard": (context) => const LeaderBoard(),j
+        "paymentScreen": (context) => const Payment_Screen(),
       },
     );
   }

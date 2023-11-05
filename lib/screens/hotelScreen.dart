@@ -155,7 +155,7 @@ class _HotelScreenState extends State<HotelScreen> {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 226, 19, 4)),
                   onPressed: () {
-                    // Navigator.pushNamed(context, 'paymentScreen');
+                    Navigator.pushNamed(context, 'paymentScreen');
                     initiateTransaction(app);
                   },
                   child: Row(

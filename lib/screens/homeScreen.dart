@@ -1,12 +1,15 @@
 import 'dart:async';
 
 // import 'package:bhago_bharat/provider/provider.dart';
+import 'package:bhago_bharat/Authentication/loginPage.dart';
 import 'package:bhago_bharat/utilities/bottomSheet.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:geolocator/geolocator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 // import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -32,6 +35,14 @@ class _HomeScreenState extends State<HomeScreen> {
         position: LatLng(26.875823585477352, 81.02373912373632),
         infoWindow: InfoWindow(title: "My Buisness")),
   ];
+  FirebaseAuth auth = FirebaseAuth.instance;
+  final GoogleSignIn googlesigin = GoogleSignIn();
+  Future<void> signOutGoogle() async {
+    const Center(child: CircularProgressIndicator());
+    await auth.signOut();
+    await googlesigin.signOut();
+  }
+
   final Completer<GoogleMapController> _controller =
       Completer<GoogleMapController>();
   final CameraPosition _kGoogleplex = const CameraPosition(
@@ -44,12 +55,39 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         // backgroundColor: const Color.fromARGB(255, 4, 49, 87),
         backgroundColor: const Color.fromARGB(255, 217, 21, 7),
-        title: const Text("Hi Learner",
+        title: const Text("Hii Learner",
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         actions: [
           IconButton(
               onPressed: () {
-                // getUserLocation;
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      child: AlertDialog(
+                        backgroundColor: Colors.white,
+                        title: const Text(
+                          "Do you want to Log out ?",
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        actions: [
+                          TextButton(
+                              onPressed: () {
+                                auth.signOut();
+                                Navigator.popAndPushNamed(
+                                    context, 'loginScreen');
+                              },
+                              child: const Text(
+                                "Log out",
+                                style: TextStyle(
+                                    color: Colors.blue,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 19),
+                              ))
+                        ],
+                      ),
+                    );
+                  });
               },
               icon: const Icon(
                 Icons.logout,
@@ -78,7 +116,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.only(left: 10, right: 10, top: 14.0),
                 child: Text.rich(TextSpan(
-                  text: 'Apni Library ,',
+                  text: 'BLIS ,',
                   style: GoogleFonts.alice(
                       color: Colors.red,
                       fontWeight: FontWeight.w100,
