@@ -45,32 +45,16 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var responsive = MediaQuery.of(context);
-    return Container(
-        height: responsive.size.height,
-        width: responsive.size.width,
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 8, 78, 135),
-          Color.fromARGB(255, 11, 9, 37)
-        ])),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            AnimatedContainer(
-                curve: Curves.fastOutSlowIn,
-                duration: const Duration(seconds: 3),
-                child: Image.asset("assets/demo.jpg")),
-            const SizedBox(height: 12),
-            Container(
-              margin: const EdgeInsets.only(top: 60),
-              height: 50,
-              child: Image.asset("assets/nnn.jpg"),
-            ),
-            const SizedBox(height: 35),
-            // const SpinKitSpinningLines(size: 100, itemCount: 8 ,color: Colors.white as Color)
-            const SpinKitCircle(color: Colors.white, size: 50),
-          ],
-        ));
+    return SizedBox(
+      height: responsive.size.height,
+      width: responsive.size.width,
+      child: Opacity(
+        opacity: 0.3,
+        child: Image.asset(
+          "assets/splash.jpg",
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
   }
 }

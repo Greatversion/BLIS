@@ -57,7 +57,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: Colors.white,
               ))
         ],
-       
       ),
       drawer: Drawer(
         width: responsive.size.width * 0.68,
@@ -139,7 +138,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             itemBuilder: (context, index) {
                               return InkWell(
                                 onTap: () {
-                                  Navigator.pushNamed(context, "hotelScreen");
+                                  Navigator.pushNamed(context, "libScreen");
                                 },
                                 child: Card(
                                   color:

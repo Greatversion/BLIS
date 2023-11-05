@@ -3,6 +3,9 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:upi_india/upi_app.dart';
+import 'package:upi_india/upi_india.dart';
+import 'package:upi_india/upi_response.dart';
 
 class HotelScreen extends StatefulWidget {
   const HotelScreen({super.key});
@@ -12,6 +15,19 @@ class HotelScreen extends StatefulWidget {
 }
 
 class _HotelScreenState extends State<HotelScreen> {
+  Future<UpiResponse> initiateTransaction(UpiApp app) async {
+    return _upiIndia.startTransaction(
+      app: app,
+      receiverUpiId: "9078600498@ybl",
+      receiverName: 'Md Azharuddin',
+      transactionRefId: 'TestingUpiIndiaPlugin',
+      transactionNote: 'Not actual. Just an example.',
+      amount: 1.00,
+    );
+  }
+
+  UpiIndia _upiIndia = UpiIndia();
+  UpiApp app = UpiApp.googlePay;
   @override
   Widget build(BuildContext context) {
     var responsive = MediaQuery.of(context);
@@ -24,7 +40,7 @@ class _HotelScreenState extends State<HotelScreen> {
             // ignore: sized_box_for_whitespace
             Stack(alignment: Alignment.bottomLeft, children: [
               Container(
-                height: 250,
+                height: 260,
                 width: responsive.size.width,
                 child: Swiper(
                   itemCount: 5,
@@ -107,11 +123,11 @@ class _HotelScreenState extends State<HotelScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Free Wifi",
+                          "• Free Wifi",
                           style: TextStyle(fontSize: 15.5, color: Colors.white),
                         ),
                         Text(
-                          "Personal Desk",
+                          "• Personal Desk",
                           style: TextStyle(fontSize: 15.5, color: Colors.white),
                         ),
                       ],
@@ -120,11 +136,11 @@ class _HotelScreenState extends State<HotelScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "24/7 Open",
+                          "• 24/7 Open",
                           style: TextStyle(fontSize: 15.5, color: Colors.white),
                         ),
                         Text(
-                          "A/C Room",
+                          "• A/C Room",
                           style: TextStyle(fontSize: 15.5, color: Colors.white),
                         ),
                       ],
@@ -138,7 +154,10 @@ class _HotelScreenState extends State<HotelScreen> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: const Color.fromARGB(255, 226, 19, 4)),
-                  onPressed: () {},
+                  onPressed: () {
+                    // Navigator.pushNamed(context, 'paymentScreen');
+                    initiateTransaction(app);
+                  },
                   child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
