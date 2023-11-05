@@ -1,5 +1,8 @@
+import 'package:bhago_bharat/Authentication/login.dart';
+import 'package:bhago_bharat/Authentication/loginPage.dart';
 import 'package:bhago_bharat/screens/homeScreen.dart';
 import 'package:bhago_bharat/screens/hotelScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -7,6 +10,7 @@ import 'package:geolocator/geolocator.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   LocationPermission permission = await Geolocator.requestPermission();
+ await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -25,9 +29,11 @@ class MyApp extends StatelessWidget {
                 ButtonStyle(iconColor: MaterialStatePropertyAll(Colors.white))),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const LoginCheck(),
       routes: {
-        "hotelScreen": (context) => const HotelScreen(),
+        "libScreen": (context) => const HotelScreen(),
+        "homeScreen": (context) => const HomeScreen(),
+        "loginScreen": (context) => const SignInScreen(),
         // "mainScreen": (context) => const MainScreen(),
         // "homePage": (context) => const HomePage(),
         // // "share": (context) => SharePage(),

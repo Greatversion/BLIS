@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "926086541731",
+    "project_id": "apni-library-64670",
+    "storage_bucket": "apni-library-64670.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926086541731:android:9d4d95962c918d5732ea16",
+        "android_client_info": {
+          "package_name": "com.example.bhago_bharat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926086541731-3metc9cfoedmlnei6s535g30rpdgtcv5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bhago_bharat",
+            "certificate_hash": "8a053941719ca7a0b0dd435e04ae1d5e301e4456"
+          }
+        },
+        {
+          "client_id": "926086541731-ba84n56odklu1ciap48do29mr2irkqeg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV7W-5xRf_a0XP0fcNHajVOYmrEN6-KqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926086541731-ba84n56odklu1ciap48do29mr2irkqeg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
