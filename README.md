@@ -10,12 +10,12 @@ Develop a comprehensive study room booking app with user authentication and role
 Implement various features, including room listing, booking, search, filtering, location services, notifications, payment gateways, user rating and review, database, security, performance optimization, analytics and reporting, admin dashboard, mobile and web interfaces.
 Utilised Flutter for the frontend and Node.js with Express and MongoDB for the backend.
 
-![splash-intro screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/f537965e-6f85-4c76-8da3-ac04746b6108)
-![home-screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/27bd3e26-c5b2-44f4-9d04-a8aab2f8c7cf)
-![about-screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/feb8fb62-0e6a-4c91-9a23-9b989be255ba)
-![seat-allocation screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/2eac21e5-3053-4e98-8fb8-8e80a78fe489)
-![payment-processing screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/334cd566-fdab-4e80-8cb9-ba869e1f0810)
-![log-out screen](https://github.com/Greatversion/hackCbs_project/assets/105535211/83ad14c6-0853-49ab-a8f4-e023390347f2)
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/f537965e-6f85-4c76-8da3-ac04746b6108" alt="splash-intro screen" width="200" >
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/27bd3e26-c5b2-44f4-9d04-a8aab2f8c7cf" alt="home-screen" width="200" >
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/feb8fb62-0e6a-4c91-9a23-9b989be255ba" alt="about-screen" width="200" >
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/2eac21e5-3053-4e98-8fb8-8e80a78fe489" alt="seat-allocation screen" width="200" >
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/334cd566-fdab-4e80-8cb9-ba869e1f0810" alt="payment-processing screen" width="200" >
+<img src="https://github.com/Greatversion/hackCbs_project/assets/105535211/83ad14c6-0853-49ab-a8f4-e023390347f2" alt="log-out screen" width="200" >
 
 
 # Other Resources and Overviews
